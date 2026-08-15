@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { AboutMe } from './components/AboutMe';
@@ -105,6 +106,9 @@ export const App: React.FC = () => {
         onClose={() => setSelectedProject(null)}
         onNavigateContact={handleNavigateContact}
       />
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
 
     </div>
   );
